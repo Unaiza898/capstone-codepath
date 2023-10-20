@@ -1,0 +1,112 @@
+[
+  {
+    "title": "web development 101",
+    "instructor": "jane smith",
+    "duration": "8 weeks",
+    "description": "a comprehensive course on web development basics and best practices.",
+    "rating": 4.7,
+    "reviews": 28,
+    "startdate": "2023-11-01",
+    "enddate": "2023-12-21",
+    "cost": "$299"
+  },
+  {
+    "title": "machine learning fundamentals",
+    "instructor": "alex johnson",
+    "duration": "10 weeks",
+    "description": "an in-depth course on machine learning algorithms and techniques.",
+    "rating": 4.9,
+    "reviews": 42,
+    "startdate": "2023-10-15",
+    "enddate": "2023-12-30",
+    "cost": "$399"
+  },
+  {
+    "title": "data science for beginners",
+    "instructor": "ella brown",
+    "duration": "6 weeks",
+    "description": "a beginner-friendly introduction to data science concepts and tools.",
+    "rating": 4.5,
+    "reviews": 36,
+    "startdate": "2023-11-05",
+    "enddate": "2023-12-15",
+    "cost": "$249"
+  },
+  {
+    "title": "full-stack web development",
+    "instructor": "mark davis",
+    "duration": "12 weeks",
+    "description": "master both front-end and back-end web development.",
+    "rating": 4.8,
+    "reviews": 39,
+    "startdate": "2023-10-10",
+    "enddate": "2024-01-01",
+    "cost": "$499"
+  },
+  {
+    "title": "mobile app development with react native",
+    "instructor": "sophia clark",
+    "duration": "9 weeks",
+    "description": "learn to build mobile apps using react native.",
+    "rating": 4.6,
+    "reviews": 31,
+    "startdate": "2023-11-20",
+    "enddate": "2024-01-25",
+    "cost": "$349"
+  },
+  {
+    "title": "cybersecurity essentials",
+    "instructor": "michael white",
+    "duration": "10 weeks",
+    "description": "a comprehensive course on cybersecurity and ethical hacking.",
+    "rating": 4.9,
+    "reviews": 45,
+    "startdate": "2023-10-28",
+    "enddate": "2024-01-05",
+    "cost": "$399"
+  },
+  {
+    "title": "artificial intelligence & ethics",
+    "instructor": "liam smith",
+    "duration": "8 weeks",
+    "description": "explore the ethical implications of ai and machine learning.",
+    "rating": 4.7,
+    "reviews": 37,
+    "startdate": "2023-11-12",
+    "enddate": "2024-01-07",
+    "cost": "$349"
+  },
+  {
+    "title": "blockchain development",
+    "instructor": "olivia wilson",
+    "duration": "12 weeks",
+    "description": "become proficient in blockchain technology and development.",
+    "rating": 4.8,
+    "reviews": 41,
+    "startdate": "2023-10-18",
+    "enddate": "2024-02-08",
+    "cost": "$499"
+  },
+  {
+    "title": "data analysis with python",
+    "instructor": "lucas brown",
+    "duration": "7 weeks",
+    "description": "learn data analysis using python and popular libraries.",
+    "rating": 4.6,
+    "reviews": 34,
+    "startdate": "2023-11-15",
+    "enddate": "2024-01-05",
+    "cost": "$299"
+  },
+  {
+    "title": "cloud computing and aws certification",
+    "instructor": "emma harris",
+    "duration": "10 weeks",
+    "description": "prepare for aws certification and cloud computing career.",
+    "rating": 4.9,
+    "reviews": 48,
+    "startdate": "2023-10-25",
+    "enddate": "2024-01-15",
+    "cost": "$399"
+  }
+]
