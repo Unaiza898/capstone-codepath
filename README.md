@@ -1,4 +1,4 @@
-# [DevLearnHub: Empowering Developers, One Byte at a Time]
+# DevLearnHub: Empowering Developers, One Byte at a Time
 
 CodePath WEB103 Final Project
 
