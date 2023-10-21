@@ -22,6 +22,40 @@ Frontend: React
 
 Backend: Railway, postgres
 
+## Features
+
+### User login
+
+user can succesfuly login to the app
+
+[gif goes here]
+
+### User courses
+
+User can see the list of courses to enroll in 
+
+[gif goes here]
+
+### User dashboard
+
+user is directed to its dashboard with login and it shows all the courses the user loged in 
+
+[gif goes here]
+
+### Course ADD
+Instructor can add new courses
+
+[gif goes here]
+
+### Course Delete
+Instructor can delete courses
+
+[gif goes here]
+
+### Students enrolled
+Instructor can see the logistics of how many students are enrolled into the courses
+
+[gif goes here]
 
 ## Installation Instructions
 
