@@ -25,3 +25,23 @@ const getCourses = async (req, res) => {
     }
 
 }
+
+
+
+const getCourse = async (req, res) => {
+
+    try{
+
+
+        const id = parseInt(req.params.id)
+        const results = await pool.query('SELECT * FROM courses WHERE id = $1', [id])
+        res.status(200).json(results.rows[0])
+    }
+
+    catch(error){
+        console.log('Unable to get course')
+        console.log('Error:', error.message)
+
+    }
+}
+
