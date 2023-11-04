@@ -24,6 +24,14 @@ Backend: Railway, postgres
 
 ## Features
 
+### Back end postgress
+
+back implemented for the tables 
+
+<img width="745" alt="image" src="https://github.com/Unaiza898/capstone-codepath/assets/65740643/0b5eaf55-353f-42fa-a543-5c7b50a1a52e">
+
+
+
 ### User login
 
 user can succesfuly login to the app
