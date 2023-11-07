@@ -81,23 +81,23 @@ const seedCoursesTable = async () => {
 
 //   }
 
-  const createChallengeTable = async () => {
-    const createChallengeTableQuery = `
-        CREATE TABLE IF NOT EXISTS challenge (
-            id serial PRIMARY KEY,
-            course_id int NOT NULL,
-            challenge varchar(100) NOT NULL,
-            FOREIGN KEY(course_id) REFERENCES courses(id)
-        );
-    `
-    try {
-        const res = await pool.query(createChallengeTableQuery)
-        console.log('🎉 Challenge table created successfully')
-      }
-        catch (error) {
-            console.error('🔥 Error creating Challenge table', error)
-        }
-  }
+// const createChallengeTable = async () => {
+//   const createChallengeTableQuery = `
+//       CREATE TABLE IF NOT EXISTS challenge (
+//           id serial PRIMARY KEY,
+//           course_id int NOT NULL,
+//           challenge varchar(100) NOT NULL,
+//           FOREIGN KEY(course_id) REFERENCES courses(id)
+//       );
+//   `
+//   try {
+//       const res = await pool.query(createChallengeTableQuery)
+//       console.log('🎉 Challenge table created successfully')
+//     }
+//       catch (error) {
+//           console.error('🔥 Error creating Challenge table', error)
+//       }
+// }
 
 //   const createUsersTable = async () => {
 //     const createUsersTableQuery = `
@@ -117,27 +117,27 @@ const seedCoursesTable = async () => {
 //         console.error('⚠️ error creating users table', err)
 //       }
 //   }
-  const createCoursesUsersTable = async () => {
-    const createCoursesUsersTableQuery = `
-        CREATE TABLE IF NOT EXISTS courses_users (
-            course_id int NOT NULL,
-            user_id int NOT NULL,
-            PRIMARY KEY (course_id, user_id),
-            FOREIGN KEY (course_id) REFERENCES courses(id) ON UPDATE CASCADE,
-            FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE
-        );
-    `
+// const createCoursesUsersTable = async () => {
+//   const createCoursesUsersTableQuery = `
+//       CREATE TABLE IF NOT EXISTS courses_users (
+//           course_id int NOT NULL,
+//           user_id int NOT NULL,
+//           PRIMARY KEY (course_id, user_id),
+//           FOREIGN KEY (course_id) REFERENCES courses(id) ON UPDATE CASCADE,
+//           FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE
+//       );
+//   `
 
-    try {
-        const res = await pool.query(createCoursesUsersTableQuery)
-        console.log('🎉 courses_users table created successfully')
-      }
-      catch (error) {
-        console.error('⚠️ error creating courses_users table', error)
-      }
-  }
+//   try {
+//       const res = await pool.query(createCoursesUsersTableQuery)
+//       console.log('🎉 courses_users table created successfully')
+//     }
+//     catch (error) {
+//       console.error('⚠️ error creating courses_users table', error)
+//     }
+// }
 // seedCoursesTable();
 // createTracksTable();
-createChallengeTable();
+// createChallengeTable();
 // createUsersTable();
-createCoursesUsersTable();
+// createCoursesUsersTable();
