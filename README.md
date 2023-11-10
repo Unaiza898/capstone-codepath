@@ -2,7 +2,7 @@
 
 CodePath WEB103 Final Project
 
-Designed and developed by: Unaiza Nizami
+Designed and developed by: Unaiza Nizami, Nikko 
 
 🔗 Link to deployed app:
 

@@ -140,4 +140,4 @@ const seedCoursesTable = async () => {
 // createTracksTable();
 createChallengeTable();
 // createUsersTable();
-createCoursesUsersTable();
+// createCoursesUsersTable();

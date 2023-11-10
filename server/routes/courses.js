@@ -1,5 +1,5 @@
 import express from 'express'
-import CourseController from '../controllers/CourseController.js'
+import CourseController from '../controllers/courses.js'
 
 const router = express.Router()
 
@@ -9,7 +9,7 @@ const router = express.Router()
 
 
 router.get('/', CourseController.getCourses)
-router.get('/:id', CourseController.getCourseById)
+// router.get('/:id', CourseController.getCourseById)
 router.post('/', CourseController.createCourse)
 router.delete('/:id', CourseController.deleteCourse)
 router.patch('/:id', CourseController.updateCourse)
