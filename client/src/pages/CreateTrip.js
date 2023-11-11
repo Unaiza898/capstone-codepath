@@ -3,7 +3,7 @@ import './CreateTrip.css'
 
 const CreateTrip = () => {
 
-    const [post, setPost] = useState({id: 0, title: "", description: "", img_url: "", num_days: 0, start_date: "", end_date: "", total_cost: 0.0 })
+    const [post, setPost] = useState({id: 0, title: "", instructor: "", duration: "", description: "",rating: 0,reviews:0,start_date: "", end_date: "", cost:"" })
     
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -17,7 +17,16 @@ const CreateTrip = () => {
     
     const createPost = (event) => {
         event.preventDefault();
-
+        const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(post),
+          };
+      
+          fetch("http://localhost:3001/api/courses/", options);
+          window.location = "/";
 
         
     }
@@ -40,8 +49,12 @@ const CreateTrip = () => {
                 <br/>
 
 
+                <label>rating</label><br />
+                <input type="number" id="rating" name="rating" value={post.rating} onChange={handleChange}/><br />
+                <br/>
+
                 <label>Duration</label><br />
-                <input type="number" id="num_days" name="num_days" value={post.num_days} onChange={handleChange}/><br />
+                <input type="text" id="duration" name="duration" value={post.duration} onChange={handleChange}/><br />
                 <br/>
 
                 <label>Start Date </label><br />
@@ -53,7 +66,7 @@ const CreateTrip = () => {
                 <br/>
 
                 <label>Total Cost</label><br />
-                <input type="text" id="total_cost" name="total_cost" value={post.total_cost} onChange={handleChange}/><br />
+                <input type="text" id="cost" name="cost" value={post.cost} onChange={handleChange}/><br />
                 <br/>
 
                 <input type="submit" value="Submit" onClick={createPost} />
