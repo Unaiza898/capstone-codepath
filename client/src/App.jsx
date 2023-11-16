@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Root from "./pages/Root";
-import Homepage from "./pages/Homepage";
+import Homepage, { loader as courseLoader } from "./pages/Homepage";
 import Register from "./pages/authentication/Register";
 import Login from "./pages/authentication/Login";
 
@@ -13,6 +13,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
+        loader: courseLoader,
       },
       {
         path: "/register",
