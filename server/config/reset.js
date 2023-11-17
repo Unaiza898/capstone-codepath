@@ -80,7 +80,23 @@ const seedCoursesTable = async () => {
 //       }
 
 //   }
+const createUsersTripsTable = async () => {
+  const createUsersTripsTableQuery = `
+    CREATE TABLE IF NOT EXISTS users_trips (
+      id serial PRIMARY KEY,
+      course_id int NOT NULL,
+      username text NOT NULL,
+      FOREIGN KEY(course_id) REFERENCES courses(id)
+    );
+  `
 
+  try {
+      const res = await pool.query(createUsersTripsTableQuery)
+      console.log('🎉 users_trips table created successfully')
+  } catch (err) {
+      console.error('⚠️ error creating users_trips table', err)
+  }
+}
   const createChallengeTable = async () => {
     const createChallengeTableQuery = `
         CREATE TABLE IF NOT EXISTS challenge (
@@ -138,6 +154,7 @@ const seedCoursesTable = async () => {
   }
 // seedCoursesTable();
 // createTracksTable();
-createChallengeTable();
+// createChallengeTable();
+createUsersTripsTable();
 // createUsersTable();
-createCoursesUsersTable();
+// createCoursesUsersTable();
