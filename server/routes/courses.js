@@ -6,7 +6,7 @@ const router = express.Router();
 // @route   GET api/courses
 
 router.get("/", CourseController.getCourses);
-// router.get("/:id", CourseController.getCourseById);
+router.get("/:id", CourseController.getCourse);
 router.post("/", CourseController.createCourse);
 router.delete("/:id", CourseController.deleteCourse);
 router.patch("/:id", CourseController.updateCourse);
