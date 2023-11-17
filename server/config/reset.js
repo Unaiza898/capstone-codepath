@@ -133,28 +133,29 @@ const createUsersTripsTable = async () => {
 //         console.error('⚠️ error creating users table', err)
 //       }
 //   }
-  const createCoursesUsersTable = async () => {
-    const createCoursesUsersTableQuery = `
-        CREATE TABLE IF NOT EXISTS courses_users (
-            course_id int NOT NULL,
-            user_id int NOT NULL,
-            PRIMARY KEY (course_id, user_id),
-            FOREIGN KEY (course_id) REFERENCES courses(id) ON UPDATE CASCADE,
-            FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE
-        );
-    `
+// const createCoursesUsersTable = async () => {
+//   const createCoursesUsersTableQuery = `
+//       CREATE TABLE IF NOT EXISTS courses_users (
+//           course_id int NOT NULL,
+//           user_id int NOT NULL,
+//           PRIMARY KEY (course_id, user_id),
+//           FOREIGN KEY (course_id) REFERENCES courses(id) ON UPDATE CASCADE,
+//           FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE
+//       );
+//   `
 
-    try {
-        const res = await pool.query(createCoursesUsersTableQuery)
-        console.log('🎉 courses_users table created successfully')
-      }
-      catch (error) {
-        console.error('⚠️ error creating courses_users table', error)
-      }
-  }
+//   try {
+//       const res = await pool.query(createCoursesUsersTableQuery)
+//       console.log('🎉 courses_users table created successfully')
+//     }
+//     catch (error) {
+//       console.error('⚠️ error creating courses_users table', error)
+//     }
+// }
 // seedCoursesTable();
 // createTracksTable();
 // createChallengeTable();
 createUsersTripsTable();
 // createUsersTable();
+// createCoursesUsersTable();
 // createCoursesUsersTable();
