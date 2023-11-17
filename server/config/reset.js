@@ -155,7 +155,7 @@ const createUsersTripsTable = async () => {
 // seedCoursesTable();
 // createTracksTable();
 // createChallengeTable();
-createUsersTripsTable();
+// createUsersTripsTable();
 // createUsersTable();
 // createCoursesUsersTable();
 // createCoursesUsersTable();
