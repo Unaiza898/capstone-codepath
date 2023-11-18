@@ -4,7 +4,7 @@ const Login = (props) => {
      
     return (
       <div className='Login'>
-        <h1>On the Fly ✈️</h1>
+        <h1>Dev learn hub</h1>
         <center>
           <a href={AUTH_URL}>
             <button className="headerBtn"> 🔒 Login via Github </button>

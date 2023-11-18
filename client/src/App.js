@@ -29,9 +29,9 @@ const App = () => {
     }
 
     const fetchCourse = async () => {
-      // const response = await fetch(`${API_URL}/api/courses/get`)
-      // const data = await response.json()
-      // setCourse(data)
+      const response = await fetch(`https://devhub-server.vercel.app/api/courses/get`)
+      const data = await response.json()
+      setCourse(data)
     }
   
     fetchCourse()
@@ -49,7 +49,11 @@ const App = () => {
     {
       path: "/",
       element: user && user.id ?
-      <ReadCourses user={user} data={course} /> : <Login api_url={API_URL} />
+      <ReadCourses user={user} data={course} /> : 
+      <div>
+        <Login api_url={API_URL} />
+        <ReadCourses user={user} data={course} />
+        </div> 
     },
     {
       path:"/trip/new",
