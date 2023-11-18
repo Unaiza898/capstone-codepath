@@ -29,9 +29,9 @@ const App = () => {
     }
 
     const fetchCourse = async () => {
-      const response = await fetch(`${API_URL}/api/courses/get`)
-      const data = await response.json()
-      setCourse(data)
+      // const response = await fetch(`${API_URL}/api/courses/get`)
+      // const data = await response.json()
+      // setCourse(data)
     }
   
     fetchCourse()
