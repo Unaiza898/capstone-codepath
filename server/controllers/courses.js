@@ -35,6 +35,7 @@ const createCourse = async (req, res) => {
   }
 };
 
+//get all courses
 const getCourses = async (req, res) => {
   try {
     const results = await pool.query("SELECT * FROM courses");
@@ -44,6 +45,7 @@ const getCourses = async (req, res) => {
   }
 };
 
+//get course by id
 const getCourse = async (req, res) => {
   try {
     const id = parseInt(req.params.id);
@@ -58,7 +60,6 @@ const getCourse = async (req, res) => {
 };
 
 // update the course
-
 const updateCourse = async (req, res) => {
   try {
     const {
