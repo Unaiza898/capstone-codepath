@@ -42,6 +42,10 @@ user can succesfuly login to the app
 
 ![capstonelogin](https://github.com/Unaiza898/capstone-codepath/assets/65740643/0ddf927b-3edd-4f49-a0ad-2a666634ccdc)
 
+ ✅ **See course**
+
+Intructor can add a course 
+![capstonecoursedisplay](https://github.com/Unaiza898/capstone-codepath/assets/65740643/64827170-3d72-49e6-9f6d-345b1c1a92b9)
 
 ### User courses
 
