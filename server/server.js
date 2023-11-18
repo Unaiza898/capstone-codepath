@@ -36,7 +36,7 @@ passport.deserializeUser((user, done) => {
 })
 
 app.get('/', (req, res) => {
-  res.redirect('https://capstone-codepath-ily3mvqmj-unaiza898.vercel.app/')
+  res.send('Hello World!')
 })
 // authentication routes
 app.use('/auth', authRoutes)
@@ -44,8 +44,8 @@ app.use('/auth', authRoutes)
 app.use('/api/courses', courseRoutes)
 
 
-const PORT = process.env.PORT || 3001
+// const PORT = process.env.PORT || 3001
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-})
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server running on http://localhost:${PORT}`);
+// })
