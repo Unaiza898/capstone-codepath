@@ -87,9 +87,9 @@ passport.deserializeUser((user, done) => {
   done(null, user)
 })
 
-app.get('/', (req, res) => {
-  res.redirect('http://localhost:3000')
-})
+// app.get('/', (req, res) => {
+//   res.redirect('http://localhost:3000')
+// })
 // authentication routes
 app.use('/auth', authRoutes)
 
