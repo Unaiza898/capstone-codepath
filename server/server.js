@@ -18,15 +18,15 @@ app.use(
   })
 );
 
-const CLIENT_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://fredngo-cp-w103-lab9-client.up.railway.app"
-    : "http://localhost:3000";
+// const CLIENT_URL =
+//   process.env.NODE_ENV === "production"
+//     ? "https://fredngo-cp-w103-lab9-client.up.railway.app"
+//     : "http://localhost:3000";
 
 app.use(express.json());
 app.use(
   cors({
-    origin: CLIENT_URL,
+    origin: "http://127.0.0.1:5173/",
     methods: "GET,POST,PUT,DELETE,PATCH",
     credentials: true,
   })
@@ -45,7 +45,7 @@ passport.deserializeUser((user, done) => {
 });
 
 app.get("/", (req, res) => {
-  res.redirect(CLIENT_URL);
+  res.redirect("http://127.0.0.1:5173/");
 });
 
 // authentication routes
