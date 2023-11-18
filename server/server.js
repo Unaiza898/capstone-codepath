@@ -18,7 +18,7 @@ app.use(session({
 
 app.use(express.json())
 app.use(cors({
-  origin: 'https://capstone-codepath.vercel.app/',
+  origin: 'http://localhost:3000',
   methods: 'GET,POST,PUT,DELETE,PATCH',
   credentials: true
 }))
@@ -36,7 +36,7 @@ passport.deserializeUser((user, done) => {
 })
 
 app.get('/', (req, res) => {
-  res.redirect('https://capstone-codepath.vercel.app/')
+  res.redirect('http://localhost:3000')
 })
 // authentication routes
 app.use('/auth', authRoutes)
