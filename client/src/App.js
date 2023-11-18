@@ -15,9 +15,9 @@ import Login from './pages/Login'
 const App = () => {
   const [user, setUser] = useState([])
 
-  // const API_URL = 'https://capstone-codepath-9xg4-jm8x5x248-unaiza898.vercel.app'
+  const API_URL = 'https://devhub-server.vercel.app'
   
-  const API_URL = 'http://localhost:3001'
+  // const API_URL = 'http://localhost:3001'
   const [course, setCourse] = useState([]);
   const [destinations, setDestinations] = useState([]);
 

@@ -25,7 +25,7 @@ const CreateTrip = () => {
             body: JSON.stringify(post),
           };
       
-          fetch("http://localhost:3001/api/courses/", options);
+          fetch("https://devhub-server.vercel.app/api/courses/", options);
           window.location = "/";
 
         

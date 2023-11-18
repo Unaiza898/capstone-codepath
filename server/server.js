@@ -70,7 +70,7 @@ app.use(session({
 
 app.use(express.json())
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://devhub-client.vercel.app/',
   methods: 'GET,POST,PUT,DELETE,PATCH',
   credentials: true
 }))
@@ -87,10 +87,10 @@ passport.deserializeUser((user, done) => {
   done(null, user)
 })
 
-// app.get('/', (req, res) => {
-//   res.redirect('http://localhost:3000')
-// })
-// authentication routes
+app.get('/', (req, res) => {
+  res.redirect('https://devhub-client.vercel.app/')
+})
+
 app.use('/auth', authRoutes)
 
 app.use('/api/courses', courseRoutes)
