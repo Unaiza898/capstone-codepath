@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom'
-import ReadTrips from './pages/ReadTrips'
+import ReadCourses from './pages/ReadCourse'
 import CreateTrip from './pages/CreateTrip'
 import EditTrip from './pages/EditTrip'
 import CreateDestination from './pages/CreateDestination';
@@ -15,8 +15,10 @@ import Login from './pages/Login'
 const App = () => {
   const [user, setUser] = useState([])
 
-  const API_URL = 'https://capstone-codepath-9xg4-jm8x5x248-unaiza898.vercel.app'
-  const [trips, setTrips] = useState([]);
+  // const API_URL = 'https://capstone-codepath-9xg4-jm8x5x248-unaiza898.vercel.app'
+  
+  const API_URL = 'http://localhost:3001'
+  const [course, setCourse] = useState([]);
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
@@ -25,6 +27,14 @@ const App = () => {
       const json = await response.json()
       setUser(json.user)
     }
+
+    const fetchCourse = async () => {
+      const response = await fetch(`${API_URL}/api/courses/get`)
+      const data = await response.json()
+      setCourse(data)
+    }
+  
+    fetchCourse()
     getUser()
   }, []);
   const logout = async () => {
@@ -39,24 +49,18 @@ const App = () => {
     {
       path: "/",
       element: user && user.id ?
-      <ReadTrips user={user} data={trips} /> : <Login api_url={API_URL} />
+      <ReadCourses user={user} data={course} /> : <Login api_url={API_URL} />
     },
     {
       path:"/trip/new",
       element: <CreateTrip />
     },
-    {
-      path:"/edit/:id",
-      element: <EditTrip data={trips} />
-    },
+
     {
       path:"/destinations",
       element: <ReadDestinations data={destinations} />
     },
-    {
-      path:"/trip/get/:id",
-      element: <TripDetails data={trips} />
-    },
+
     {
       path:"/destination/new/:trip_id",
       element: <CreateDestination />
@@ -65,10 +69,6 @@ const App = () => {
       path:"/activity/create/:trip_id",
       element: <CreateActivity />
     },
-    {
-      path:"/destinations/add/:destination_id",
-      element: <AddToTrip data={trips}/>
-    }
   ]);
 
   

@@ -4,7 +4,7 @@ import ActivityBtn from '../components/ActivityBtn';
 import DestinationBtn from '../components/DestinationBtn';
 import './TripDetails.css'
 
-const TripDetails = ({data}) => {
+const CourseDetails = ({data}) => {
 
     const {id} = useParams();
     const [post, setPost] = useState({id: 0, title: "", description: "", img_url: "", num_days: 0, start_date: "", end_date: "", total_cost: 0.0 })
@@ -78,4 +78,4 @@ const TripDetails = ({data}) => {
     )
 }
 
-export default TripDetails
+export default  CourseDetails

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
 
 
-const ReadTrips = (props) => {
+const ReadCourses= (props) => {
 
     const [posts, setPosts] = useState([]);
     
@@ -20,15 +20,14 @@ const ReadTrips = (props) => {
                          id={post.id} 
                          title={post.title} 
                          description={post.description} 
-                         img_url={post.img_url} 
-                         num_days={post.num_days}
+                         num_days={post.duration}
                          start_date={post.start_date}
                          end_date={post.end_date}
-                         total_cost={post.total_cost} />
-                ) : <h3 className="noResults">{'No Trips Yet 😞'}</h3>
+                         total_cost={post.cost} />
+                ) : <h3 className="noResults">{'No Courses Yet 😞'}</h3>
             }
         </div>  
     )
 }
 
-export default ReadTrips;
+export default ReadCourses;
